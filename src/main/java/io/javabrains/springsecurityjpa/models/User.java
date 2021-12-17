@@ -3,30 +3,30 @@ package io.javabrains.springsecurityjpa.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String userName;
+    private int user_id;
+    private String username;
     private String password;
-    private boolean active;
-    private String roles;
+    private boolean enabled;
+    private String role;
 
     public int getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.user_id = id;
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getPassword() {
@@ -38,18 +38,18 @@ public class User {
     }
 
     public boolean isActive() {
-        return active;
+        return enabled;
     }
 
     public void setActive(boolean active) {
-        this.active = active;
+        this.enabled = active;
     }
 
     public String getRoles() {
-        return roles;
+        return role;
     }
 
     public void setRoles(String roles) {
-        this.roles = roles;
+        this.role = roles;
     }
 }
